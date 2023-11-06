@@ -56,7 +56,6 @@ class AuthController {
             $_SESSION = [];
             header('Location: /');
         }
-       
     }
 
     public static function registro(Router $router) {
@@ -156,7 +155,6 @@ class AuthController {
     public static function reestablecer(Router $router) {
 
         $token = s($_GET['token']);
-
         $token_valido = true;
 
         if(!$token) header('Location: /');
@@ -168,7 +166,6 @@ class AuthController {
             Usuario::setAlerta('error', 'Token No Válido, intenta de nuevo');
             $token_valido = false;
         }
-
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
 

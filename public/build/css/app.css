@@ -346,11 +346,7 @@ h3 {
   text-align: center;
 }
 
-.auth {
-  width: min(95%, 60rem);
-  margin: 0 auto;
-}
-.auth__headings {
+[class$=__heading] {
   font-family: "Outfit", sans-serif;
   font-weight: 900;
   margin: 2rem 0;
@@ -358,7 +354,28 @@ h3 {
   text-align: center;
 }
 
+.auth {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+}
+
 .auth__texto {
   font-size: 2rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  gap: 0.3rem;
+}
+.formulario__label {
+  display: block;
+  font-size: 1.8rem;
+  color: rgba(26, 27, 21, 0.8);
 }
 /*# sourceMappingURL=app.css.map */
