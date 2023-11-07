@@ -370,12 +370,48 @@ h3 {
 .formulario__campo {
   display: flex;
   flex-direction: column;
-  margin: 1.5rem 0;
   gap: 0.3rem;
+  margin: 1.5rem 0;
 }
 .formulario__label {
   display: block;
   font-size: 1.8rem;
   color: rgba(26, 27, 21, 0.8);
+}
+.formulario__input {
+  padding: 1rem;
+  border: 1px solid #b1c7dd;
+  border-radius: 0.5rem;
+}
+.formulario__submit {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  border-radius: 0.7rem;
+  width: auto;
+  align-self: flex-start;
+}
+.formulario__submit:hover {
+  background-color: #0063c1;
+  cursor: pointer;
+}
+
+.acciones {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+.acciones__enlace {
+  color: #1a1b15;
+  font-size: 1.7rem;
+  font-weight: 300;
 }
 /*# sourceMappingURL=app.css.map */
