@@ -16,6 +16,7 @@
     <input type="submit" class="formulario__submit" value="Enviar Instrucciones">
   </form>
 
+  //* Opciones de Navegación
   <div class="acciones">
     <a href="/login" class="acciones__enlace">¿Ya Tienes una Cuenta? Iniciar Sesión</a>
     <a href="/registro" class="acciones__enlace">¿Aún No Tienes Cuenta? Obtener Una</a>

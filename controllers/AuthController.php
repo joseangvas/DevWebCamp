@@ -87,7 +87,7 @@ class AuthController {
                     // Crear un nuevo usuario
                     $resultado =  $usuario->guardar();
 
-                    // Enviar email
+                    // Enviar la confirmación del email
                     $email = new Email($usuario->email, $usuario->nombre, $usuario->token);
                     $email->enviarConfirmacion();
                     

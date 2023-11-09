@@ -51,7 +51,7 @@
 @mixin contenedor {
     // max-width: 120rem;   Se resume en la tercera linea
     // width: 95%;
-    width: min(95%, 120rem);
+    width: min(95%, 140rem);
     margin: 0 auto;
 }
 
@@ -79,6 +79,9 @@
 
 }
 
-@mixin texto-degradado {
+@mixin texto-degradado($ini, $fin) {
+    background: linear-gradient(to right, $ini, $fin);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
