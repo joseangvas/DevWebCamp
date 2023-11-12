@@ -93,6 +93,7 @@ class Usuario extends ActiveRecord {
         return self::$alertas;
     }
 
+    // Validación en la creación del Password Nuevo
     public function nuevo_password() : array {
         if(!$this->password_actual) {
             self::$alertas['error'][] = 'El Password Actual no puede ir vacio';
