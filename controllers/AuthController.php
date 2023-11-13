@@ -23,7 +23,7 @@ class AuthController {
                 if(!$usuario || !$usuario->confirmado ) {
                     Usuario::setAlerta('error', 'El Usuario No Existe o no esta confirmado');
                 } else {
-                    // El Usuario existe
+                    // El Usuario si existe
                     if( password_verify($_POST['password'], $usuario->password) ) {
                         
                         // Iniciar la sesión
@@ -34,8 +34,15 @@ class AuthController {
                         $_SESSION['email'] = $usuario->email;
                         $_SESSION['admin'] = $usuario->admin ?? null;
                         
+                        // Redirección del Usuario Según Acceso
+                        if($usuario->admin) {
+                            header("Location: /admin/dashboard");
+                        } else {
+                            header('Location: /finalizar-registro');
+                        }
+
                     } else {
-                        Usuario::setAlerta('error', 'Password Incorrecto');
+                        Usuario::setAlerta('error', 'El Password es Incorrecto');
                     }
                 }
             }
