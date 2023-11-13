@@ -65,7 +65,6 @@ class AuthController {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $usuario->sincronizar($_POST);
-            
             $alertas = $usuario->validar_cuenta();
 
             if(empty($alertas)) {
@@ -220,7 +219,7 @@ class AuthController {
 
         if(empty($usuario)) {
             // No se encontró un usuario con ese token
-            Usuario::setAlerta('error', 'Token No Válido');
+            Usuario::setAlerta('error', 'Token No Válido. La Cuenta No se Confirmó');
         } else {
             // Confirmar la cuenta
             $usuario->confirmado = 1;
@@ -230,7 +229,7 @@ class AuthController {
             // Guardar en la BD
             $usuario->guardar();
 
-            Usuario::setAlerta('exito', 'Cuenta Comprobada Correctamente');
+            Usuario::setAlerta('exito', 'Cuenta Comprobada Exitosamente');
         }
 
      
