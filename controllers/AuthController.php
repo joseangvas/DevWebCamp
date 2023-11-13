@@ -14,7 +14,6 @@ class AuthController {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
     
             $usuario = new Usuario($_POST);
-
             $alertas = $usuario->validarLogin();
             
             if(empty($alertas)) {
