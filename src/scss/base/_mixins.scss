@@ -96,8 +96,6 @@
 }
 
 @mixin menu-social($color, $size) {
-
-
     &__enlace {
 
         &::before {   // Es un Pseudoelemeto que no existe como tal
@@ -137,5 +135,18 @@
 
     &__ocultar {
         display: none;
+    }
+}
+
+@mixin enlace {
+    all: unset;  // Borra todos los estilos anteriores. Siempre se coloca al principio.
+    color: v.$blanco;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: v.$bold;
+
+    &:hover {
+      color: v.$azul;
+      cursor: pointer;
     }
 }
