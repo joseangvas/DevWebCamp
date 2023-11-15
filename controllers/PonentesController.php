@@ -16,10 +16,13 @@ class PonentesController {
 
   public static function crear(Router $router) {
 
+    $alertas = [];
+
     $router->render('admin/ponentes/crear', [
-      'titulo' => 'Registrar ponente o conferencista'
+      'titulo' => 'Registrar ponente o conferencista',
+      'alertas' => $alertas
     ]);
   }
 
-  
+
 }

@@ -804,4 +804,10 @@ h3 {
     width: auto;
   }
 }
+.dashboard__contenedor, .dashboard__formulario {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 1rem;
+}
 /*# sourceMappingURL=app.css.map */
