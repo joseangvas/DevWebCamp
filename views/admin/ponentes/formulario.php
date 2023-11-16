@@ -1,5 +1,5 @@
-<fieldset>
-  <legend>Información Personal</legend>
+<fieldset class="formulario__fieldset">
+  <legend class="formulario__legend">Información Personal</legend>
 
   <div class="formulario__campo">
     <label for="nombre" class="formulario__label">Nombre</label>
@@ -24,4 +24,51 @@
       value="<?php echo $ponente->apellido ?? ''; ?>"
     />
   </div>
+
+  <div class="formulario__campo">
+    <label for="ciudad" class="formulario__label">Ciudad</label>
+    <input 
+      type="text" 
+      class="formulario__input"
+      id="ciudad"
+      name="ciudad"
+      placeholder="Ciudad del Ponente"
+      value="<?php echo $ponente->ciudad ?? ''; ?>"
+    />
+  </div>
+
+  <div class="formulario__campo">
+    <label for="pais" class="formulario__label">Pais</label>
+    <input 
+      type="text" 
+      class="formulario__input"
+      id="pais"
+      name="pais"
+      placeholder="Pais del Ponente"
+      value="<?php echo $ponente->pais ?? ''; ?>"
+    />
+  </div>
+
+  <div class="formulario__campo">
+    <label for="imagen" class="formulario__label">Imagen</label>
+    <input 
+      type="file" 
+      class="formulario__input formulario__input--file"
+      id="imagen"
+      name="imagen"
+    />
+  </div>
+</fieldset>
+
+<fieldset class="formulario__fieldset">
+  <legend class="formulario__legend">Información Personal</legend>
+    <div class="formulario__campo">
+      <label for="tags_input" class="formulario__label">Areas de Experiencia (Separadas por Coma)</label>
+      <input 
+        type="text"
+        class="formulario__input"
+        id="tags_input"
+        placeholder="Ej. Node.js, PHP, CSS, Laravel, UX / UI"
+      />
+    </div>
 </fieldset>
