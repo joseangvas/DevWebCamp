@@ -14,6 +14,7 @@ class PonentesController {
   }
 
 
+  //* Crear un Nuevo Ponente o Conferencista
   public static function crear(Router $router) {
 
     $alertas = [];
