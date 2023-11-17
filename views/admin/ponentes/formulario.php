@@ -28,7 +28,7 @@
   <div class="formulario__campo">
     <label for="ciudad" class="formulario__label">Ciudad</label>
     <input 
-      type="text" 
+      type="text"
       class="formulario__input"
       id="ciudad"
       name="ciudad"
@@ -88,7 +88,7 @@
       <input 
         type="text" 
         class="formulario__input--sociales"
-        name="redes{facebook}"
+        name="redes[facebook]"
         placeholder="Facebook"
         value="<?php echo $ponente->facebook ?? ''; ?>"
       />
@@ -104,7 +104,7 @@
       <input 
         type="text" 
         class="formulario__input--sociales"
-        name="redes{twitter}"
+        name="redes[twitter]"
         placeholder="Twitter"
         value="<?php echo $ponente->twitter ?? ''; ?>"
       />
@@ -120,7 +120,7 @@
       <input 
         type="text" 
         class="formulario__input--sociales"
-        name="redes{youtube}"
+        name="redes[youtube]"
         placeholder="YouTube"
         value="<?php echo $ponente->youtube ?? ''; ?>"
       />
@@ -136,7 +136,7 @@
       <input 
         type="text" 
         class="formulario__input--sociales"
-        name="redes{instagram}"
+        name="redes[instagram]"
         placeholder="Instagram"
         value="<?php echo $ponente->instagram ?? ''; ?>"
       />
@@ -152,7 +152,7 @@
       <input 
         type="text" 
         class="formulario__input--sociales"
-        name="redes{tiktok}"
+        name="redes[tiktok]"
         placeholder="Tiktok"
         value="<?php echo $ponente->tiktok ?? ''; ?>"
       />
@@ -168,7 +168,7 @@
       <input 
         type="text" 
         class="formulario__input--sociales"
-        name="redes{github}"
+        name="redes[github]"
         placeholder="GitHub"
         value="<?php echo $ponente->github ?? ''; ?>"
       />
