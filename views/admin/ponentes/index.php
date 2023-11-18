@@ -13,6 +13,7 @@
       <thead class="table__thead">
         <tr>
           <th scope="col" class="table__th">Nombre</th>
+          <th scope="col" class="table__th">Tecnologías</th>
           <th scope="col" class="table__th">Ubicación</th>
           <th scope="col" class="table__th"></th>
         </tr>
@@ -22,11 +23,15 @@
         <?php foreach ($ponentes as $ponente) { ?>
           <tr class="table__tr">
             <td class="table__td">
-              <p><?php echo $ponente->nombre . " " . $ponente->apellido; ?></p>
+              <?php echo $ponente->nombre . " " . $ponente->apellido; ?>
             </td>
 
             <td class="table__td">
-              <p><?php echo $ponente->ciudad . ", " . $ponente->pais; ?></p>
+              <?php echo $ponente->tags; ?>
+            </td>
+
+            <td class="table__td">
+              <?php echo $ponente->ciudad . ", " . $ponente->pais; ?>
             </td>
 
             <td class="table__td--acciones">
