@@ -70,7 +70,6 @@
     </div>
 
   <?php }  ?>
-
 </fieldset>
 
 <fieldset class="formulario__fieldset">
