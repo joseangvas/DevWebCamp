@@ -24,7 +24,11 @@
         <?php foreach ($ponentes as $ponente) { ?>
           <tr class="table__tr">
             <td class="table__td--imagen">
-              <img src="<?php echo $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen; ?>.png" alt="Imagen Ponente">
+              <picture>
+                <source srcset="<?php echo $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen; ?>.webp" type="image/webp">
+                <source srcset="<?php echo $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen; ?>.png" type="image/png">
+                <img src="<?php echo $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen; ?>.png" alt="Imagen Ponente">
+              </picture>
             </td>
 
             <td class="table__td">
