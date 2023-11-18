@@ -419,6 +419,12 @@ h3 {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
+.formulario__texto {
+  margin-top: 3rem;
+}
+.formulario__imagen {
+  max-width: 20rem;
+}
 .formulario__listado {
   margin: 0;
   padding: 0;
@@ -890,6 +896,9 @@ h3 {
 .table__td, .table__td--acciones {
   padding: 1.5rem 1rem;
 }
+.table__td--imagen {
+  max-width: 1rem;
+}
 .table__td--acciones {
   display: flex;
   justify-content: flex-end;
@@ -901,6 +910,8 @@ h3 {
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 .table__accion--editar {
   color: #007df4;

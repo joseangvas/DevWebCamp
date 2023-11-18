@@ -12,6 +12,7 @@
     <table class="table">
       <thead class="table__thead">
         <tr>
+          <th scope="col" class="table__th">Foto</th>
           <th scope="col" class="table__th">Nombre</th>
           <th scope="col" class="table__th">Tecnologías</th>
           <th scope="col" class="table__th">Ubicación</th>
@@ -22,6 +23,10 @@
       <tbody class="table__tbody">
         <?php foreach ($ponentes as $ponente) { ?>
           <tr class="table__tr">
+            <td class="table__td--imagen">
+              <img src="<?php echo $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen; ?>.png" alt="Imagen Ponente">
+            </td>
+
             <td class="table__td">
               <?php echo $ponente->nombre . " " . $ponente->apellido; ?>
             </td>

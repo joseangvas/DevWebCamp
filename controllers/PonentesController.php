@@ -91,10 +91,13 @@ class PonentesController {
       header('Location: /admin/ponentes');
     }
 
+    $ponente->imagen_actual = $ponente->imagen;
+    
+
     $router->render('admin/ponentes/editar', [
       'titulo' => 'Actualizar ponente o conferencista',
       'alertas' => $alertas,
-      'ponente' => $ponente ?? null
+      'ponente' => $ponente
     ]);
   }
 }
