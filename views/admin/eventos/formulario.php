@@ -51,12 +51,14 @@
         </div>
       <?php } ?>
     </div>
+
+    <input type="hidden" name="dia_id" value="">
   </div>
 
   <div class="formulario__campo" id="horas">
     <label for="hora" class="formulario__label">Seleccione la Hora:</label>
 
-    <ul class="horas">
+    <ul id="horas" class="horas">
       <?php foreach($horas as $hora) { ?>
         <li class="horas__hora"><?php echo $hora->hora; ?></li>
       <?php } ?>
