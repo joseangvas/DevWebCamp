@@ -8,7 +8,7 @@
 </div>
 
 <div class="dashboard__contenedor">
-  <?php if(!empty($ponentes)) { ?>
+  <?php if(!empty($eventos)) { ?>
     <table class="table">
       <thead class="table__thead">
         <tr>
@@ -21,36 +21,28 @@
       </thead>
 
       <tbody class="table__tbody">
-        <?php foreach ($ponentes as $ponente) { ?>
+        <?php foreach ($eventos as $evento) { ?>
           <tr class="table__tr">
-            <td class="table__td--imagen">
-              <picture>
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen; ?>.webp" type="image/webp">
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen; ?>.png" type="image/png">
-                <img src="<?php echo $_ENV['HOST'] . '/img/speakers/' . $ponente->imagen; ?>.png" alt="Imagen Ponente">
-              </picture>
+            <td class="table__td">
+              <?php echo $evento->nombre . " " . $evento->apellido; ?>
             </td>
 
             <td class="table__td">
-              <?php echo $ponente->nombre . " " . $ponente->apellido; ?>
+              <?php echo $evento->tags; ?>
             </td>
 
             <td class="table__td">
-              <?php echo $ponente->tags; ?>
-            </td>
-
-            <td class="table__td">
-              <?php echo $ponente->ciudad . ", " . $ponente->pais; ?>
+              <?php echo $evento->ciudad . ", " . $evento->pais; ?>
             </td>
 
             <td class="table__td--acciones">
-              <a class="table__accion table__accion--editar" href="/admin/ponentes/editar?id=<?php echo $ponente->id; ?>">
+              <a class="table__accion table__accion--editar" href="/admin/ponentes/editar?id=<?php echo $evento->id; ?>">
                 <i class="fa-solid fa-user-pen"></i>
                 Editar
               </a>
 
               <form method="POST" action="/admin/ponentes/eliminar" class="table__formulario">
-                <input type="hidden" name="id" value="<?php echo $ponente->id; ?>">
+                <input type="hidden" name="id" value="<?php echo $evento->id; ?>">
                 <button class="table__accion table__accion--eliminar" type="submit">
                   <i class="fa-solid fa-circle-xmark"></i>
                   Eliminar
