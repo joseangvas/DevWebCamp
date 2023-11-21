@@ -143,7 +143,7 @@ class ActiveRecord {
     public static function whereArray($array = []) {
         $query = "SELECT * FROM " . static::$tabla . " WHERE ";
         foreach($array as $key => $value) {
-            if($key == array_key_last($array)) {
+            if($key == array_key_last($array)) {  // Comparar si es el Ultimo elemento del Objeto
                 $query .= "$key = '$value'";
             } else {
                 $query .= "$key = '$value' AND ";
