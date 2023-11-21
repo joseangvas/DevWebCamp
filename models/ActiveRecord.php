@@ -132,9 +132,26 @@ class ActiveRecord {
         return $resultado;
     }
 
-    // Busqueda Where con Columna 
+    // Busqueda Where por Columna = Valor
     public static function where($columna, $valor) {
-        $query = "SELECT * FROM " . static::$tabla . " WHERE ${columna} = '${valor}'";
+        $query = "SELECT * FROM " . static::$tabla . " WHERE $columna = '$valor'";
+        $resultado = self::consultarSQL($query);
+        return array_shift( $resultado ) ;
+    }
+
+    // Busqueda Where con Múltiples Valores de Columnas
+    public static function whereArray($array = []) {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE ";
+        foreach($array as $key => $value) {
+            if($key == array_key_last($array)) {
+                $query .= "$key = '$value'";
+            } else {
+                $query .= "$key = '$value' AND ";
+            }
+        }
+        
+        // echo substr($query, 0, -4);  Otra forma de eliminar al final AND del $query mala
+
         $resultado = self::consultarSQL($query);
         return array_shift( $resultado ) ;
     }
