@@ -5,6 +5,7 @@ use Model\EventoHorario;
 
 class APIEventos {
 
+  // Obtener la Lista de Todos los Eventos
   public static function index() {
 
     $dia_id = $_GET['dia_id'] ?? '';

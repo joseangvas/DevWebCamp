@@ -79,6 +79,8 @@
       id="ponentes"
       placeholder="Buscar Ponente"
     />
+
+    <ul id="listado-ponentes" class="listado-ponentes"></ul>
   </div>
 
   <div class="formulario__campo">
