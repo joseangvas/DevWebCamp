@@ -9,7 +9,7 @@ use Model\Hora;
 use MVC\Router;
 
 class EventosController {
-
+  // Obtener la Lista General de los Eventos
   public static function index(Router $router) {
 
     $router->render('admin/eventos/index', [
