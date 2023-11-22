@@ -17,6 +17,7 @@ class EventosController {
     ]);
   }
 
+  // Crear un Evento
   public static function crear(Router $router) {
     $alertas = [];
 

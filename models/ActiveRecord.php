@@ -153,7 +153,7 @@ class ActiveRecord {
         // echo substr($query, 0, -4);  Otra forma de eliminar al final AND del $query mala
 
         $resultado = self::consultarSQL($query);
-        return array_shift( $resultado ) ;
+        return $resultado;
     }
 
     // Obtener el Total de Registros de una Tabla
