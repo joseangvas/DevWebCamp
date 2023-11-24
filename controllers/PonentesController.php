@@ -41,12 +41,12 @@ class PonentesController {
 
   //* Crear un Nuevo Ponente o Conferencista
   public static function crear(Router $router) {
-    $alertas = [];
-    $ponente = new Ponente;
-
     if(!is_admin()) {
       header('Location: /login');
     }
+
+    $alertas = [];
+    $ponente = new Ponente;
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Leer Imagen
@@ -84,7 +84,7 @@ class PonentesController {
         $resultado = $ponente->guardar();
 
         if($resultado) {
-          header('Location: /admin/ponentes');
+          header('Location: /admin/ponentes?page=1');
         }
       }
     }
@@ -111,14 +111,14 @@ class PonentesController {
     $id = filter_var($id, FILTER_VALIDATE_INT);
 
     if(!$id) {
-      header('Location: /admin/ponentes');
+      header('Location: /admin/ponentes?page1');
     }
     
     // Obtener el Ponente a Editar
     $ponente = Ponente::find($id);
 
     if(!$ponente) {
-      header('Location: /admin/ponentes');
+      header('Location: /admin/ponentes?page=1');
     }
 
     $ponente->imagen_actual = $ponente->imagen;
@@ -159,7 +159,7 @@ class PonentesController {
         $resultado = $ponente->guardar();
 
         if($resultado) {
-          header('Location: /admin/ponentes');
+          header('Location: /admin/ponentes?page=1');
         }
       }
     }
@@ -173,23 +173,22 @@ class PonentesController {
   }
 
   public static function eliminar() {
-    if(!is_admin()) {
-      header('Location: /login');
-    }
-
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
+      if(!is_admin()) {
+        header('Location: /login');
+      }
 
       $id = $_POST['id'];
       $ponente = Ponente::find($id);
 
       if(!isset($ponente)) {
-        header('Location: /admin/ponentes');
+        header('Location: /admin/ponentes?page=1');
       }
 
       $resultado = $ponente->eliminar();
 
       if($resultado) {
-        header('Location: /admin/ponentes');
+        header('Location: /admin/ponentes?page=1');
       }
     }
   }
