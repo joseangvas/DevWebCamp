@@ -81,7 +81,7 @@ class EventosController {
     $id = filter_var($id, FILTER_VALIDATE_INT);
 
     IF(!$id) {
-      header('Location: /admin/eventos');
+      header('Location: /admin/eventos?page=1');
     }
 
     $categorias = Categoria::all('ASC');
@@ -102,7 +102,7 @@ class EventosController {
         $resultado = $evento->guardar();
 
         if($resultado) {
-          header('Location: /admin/eventos/crear');
+          header('Location: /admin/eventos?page=1');
         }
       }
     }
@@ -115,5 +115,37 @@ class EventosController {
       'horas' => $horas,
       'evento' => $evento
     ]);
+  }
+
+
+  public static function eliminar() {
+    if(!is_admin()) {
+      header('Location: /login');
+    }
+
+    $alertas = [];
+
+    $id = $_GET['id'];
+    $id = filter_var($id, FILTER_VALIDATE_INT);
+
+    IF(!$id) {
+      header('Location: /admin/eventos?page=1');
+    }
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+      $id = $_POST['id'];
+      $evento = Evento::find($id);
+
+      if(!isset($evento)) {
+        header('Location: /admin/eventos?page=1');
+      }
+
+      $resultado = $evento->eliminar();
+
+      if($resultado) {
+        header('Location: /admin/eventos?page=1');
+      }
+    }
   }
 }

@@ -15,7 +15,7 @@ class APIPonentes {
     $id = filter_var($id, FILTER_VALIDATE_INT);
 
     if(!$id || $id < 1) {
-      echo json_encode([]);
+      echo json_encode([]); // Para Devolver Arreglo Vacío si no existe id del Ponente.
       return;
     }
 
