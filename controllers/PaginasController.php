@@ -30,7 +30,7 @@ class PaginasController {
 
     public static function conferencias(Router $router) {
 
-      $router->render('paginas/workshops-conferencias', [
+      $router->render('paginas/conferencias', [
         'titulo' => 'Conferencias & Workshops'
       ]);
     }

@@ -191,7 +191,7 @@
     }
 }
 
-mixin card {
+@mixin card {
     border: 1px solid lighten(v.$gris, 10);
     padding: 3rem;
 
