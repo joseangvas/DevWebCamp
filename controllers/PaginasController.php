@@ -34,6 +34,7 @@ class PaginasController {
     }
 
 
+    // Sección de Conferencias y Workshops
     public static function conferencias(Router $router) {
 
       $eventos = Evento::ordenar('hora_id', 'ASC');
