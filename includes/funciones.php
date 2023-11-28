@@ -13,7 +13,7 @@ function s($html) : string {
 
 //* Marcar Opción seleccionada en el Menú Sidebar
 function pagina_actual($path) : bool {
-    return str_contains($_SERVER['PATH_INFO'], $path) ? true : false;
+    return str_contains($_SERVER['PATH_INFO'] ?? '/', $path) ? true : false;
 }
 
 function is_auth() : bool {
