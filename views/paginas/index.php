@@ -102,6 +102,36 @@
   </div>
 </section>
 
-<div id="mapa" class="mapa">
+<section class="boletos">
+  <h2 class="boletos__heading">Boletos & Precios</h2>
+  <p class="boletos__descripcion">Precios para DevWebCamp</p>
 
-</div>
+  <div class="boletos__grid">
+    <div class="boleto boleto--presencial">
+      <h4 class="boleto__logo">&#60;DevWebCamp /></h4>
+      <p class="boleto__plan">Presencial</p>
+      <p class="boleto__precio">$199</p>
+    </div>
+
+    <div class="boleto boleto--virtual">
+      <h4 class="boleto__logo">&#60;DevWebCamp /></h4>
+      <p class="boleto__plan">Virtual</p>
+      <p class="boleto__precio">$49</p>
+    </div>
+
+    <div class="boleto boleto--gratis">
+      <h4 class="boleto__logo">&#60;DevWebCamp /></h4>
+      <p class="boleto__plan">Gratis</p>
+      <p class="boleto__precio">$0</p>
+    </div>
+  </div>
+
+  <div class="boleto__enlace-contenedor">
+    <a href="/paquetes" class="boleto__enlace">Ver Paquetes</a>
+  </div>
+</section>
+
+<section class="mapa">
+  <h2 class="mapa__titulo">Ubicación del Evento</h2>
+  <div id="mapa" class="mapa"></div>
+</section>
