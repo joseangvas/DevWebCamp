@@ -64,6 +64,7 @@ $router->get('/admin/regalos', [RegalosController::class, 'index']);
 
 // Registro de Usuarios
 $router->get('/finalizar-registro', [RegistroController::class, 'crear']);
+$router->post('/finalizar-registro/gratis', [RegistroController::class, 'gratis']);
 
 // Area Pública
 $router->get('/', [PaginasController::class, 'index']);
