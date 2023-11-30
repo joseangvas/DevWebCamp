@@ -2,6 +2,7 @@
   <h2 class="pagina__heading"><?php echo $titulo; ?></h2>
   <p class="pagina__descripcion">Tu Boleto - Te recomendamos almacenarlo, puedes compartirlo en Redes Sociales.</p>
 
+  <!-- Mostrar Boleto al Usuario -->
   <div class="boleto-virtual">
     <div class="boleto boleto--<?php echo strtolower($registro->paquete->nombre); ?> boleto--acceso">
       <div class="boleto__contenido">
