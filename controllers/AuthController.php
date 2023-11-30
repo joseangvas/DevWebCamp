@@ -24,7 +24,6 @@ class AuthController {
                 } else {
                     // El Usuario si existe
                     if( password_verify($_POST['password'], $usuario->password) ) {
-                        
                         // Iniciar la sesión
                         session_start();    
                         $_SESSION['id'] = $usuario->id;

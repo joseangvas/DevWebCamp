@@ -107,6 +107,7 @@ class PaginasController {
       ]);
     }
 
+    // Renderizar la Página 404
     public static function error(Router $router) {
 
       $router->render('paginas/error', [

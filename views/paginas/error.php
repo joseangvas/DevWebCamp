@@ -3,6 +3,6 @@
 
   <div class="pagina_404__contenedor">
     <p class="pagina_404__texto">Tal vez quieras volver al Inicio</p>
-    <a href="/" class="pagina_404__enlace">Ir al Inicio</a>
+    <a href="/" class="pagina_404__enlace">Ir al Inicio</a>  <!-- Lleva al Usuario a Página Principal -->
   </div>
 </main>
