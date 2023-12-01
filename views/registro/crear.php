@@ -31,6 +31,9 @@
       </ul>
 
       <p class="paquete__precio">$199</p>
+      
+      <div id="paypal-button-container"></div>
+      <p id="result-message"></p>
     </div>
 
     <div <?php aos_animacion(); ?> class="paquete">
@@ -44,6 +47,12 @@
       </ul>
 
       <p class="paquete__precio">$49</p>
+
+      <div id="paypal-button-container"></div>
+      <p id="result-message"></p>
     </div>
   </div>
 </main>
+
+<script src="https://www.paypal.com/sdk/js?client-id=AR02EFdH1jPdaVL34tntP0ggHiTDRB_Qvr1-sskRMKaRlnCAgi4xmdPAzmBqajMiRoXbadilMDpzmlei"></script>
+<script src="app.js"></script>

@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Proyecto Final Desarrollo Web Completo con @codigoconjuan",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "gulp dev"
   },
-  "author": "",
+  "author": "José Angel Vásquez",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.8.1",
@@ -31,6 +32,9 @@
     "terser": "^5.14.2"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
     "swiper": "^11.0.5",
     "webpack-stream": "^7.0.0"
   }
