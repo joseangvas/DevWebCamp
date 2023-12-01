@@ -3,7 +3,7 @@
   <p class="pagina__descripcion">Tu Boleto - Te recomendamos almacenarlo, puedes compartirlo en Redes Sociales.</p>
 
   <!-- Mostrar Boleto al Usuario -->
-  <div class="boleto-virtual">
+  <div <?php aos_animacion(); ?> class="boleto-virtual">
     <div class="boleto boleto--<?php echo strtolower($registro->paquete->nombre); ?> boleto--acceso">
       <div class="boleto__contenido">
         <h4 class="boleto__logo">&#60;DevWebCamp /></h4>

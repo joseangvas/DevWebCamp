@@ -2,8 +2,8 @@
   <h2 class="registro__heading"><?php echo $titulo; ?></h2>
   <p class="registro__descripcion">Elige tu Plan</p>
 
-  <div class="paquetes__grid">
-    <div <?php aos_animacion(); ?> class="paquete">
+  <div <?php aos_animacion(); ?> class="paquetes__grid">
+    <div class="paquete">
       <h3 class="paquete__nombre">Pase Gratis</h3>
 
       <ul class="paquete__lista">
@@ -18,7 +18,7 @@
       </form>
     </div>
 
-    <div <?php aos_animacion(); ?> class="paquete">
+    <div class="paquete">
       <h3 class="paquete__nombre">Pase Presencial</h3>
 
       <ul class="paquete__lista">
@@ -32,11 +32,14 @@
 
       <p class="paquete__precio">$199</p>
       
-      <div id="paypal-button-container"></div>
-      <p id="result-message"></p>
+      <div id="smart-button-container">
+        <div style="text-align: center;">
+          <div id="paypal-button-container"></div>
+        </div>  
+      </div>
     </div>
 
-    <div <?php aos_animacion(); ?> class="paquete">
+    <div class="paquete">
       <h3 class="paquete__nombre">Pase Virtual</h3>
 
       <ul class="paquete__lista">
@@ -48,11 +51,15 @@
 
       <p class="paquete__precio">$49</p>
 
-      <div id="paypal-button-container"></div>
-      <p id="result-message"></p>
+      <div id="smart-button-container">
+        <div style="text-align: center;">
+          <div id="paypal-button-container"></div>
+        </div>  
+      </div>
     </div>
   </div>
 </main>
 
-<script src="https://www.paypal.com/sdk/js?client-id=AR02EFdH1jPdaVL34tntP0ggHiTDRB_Qvr1-sskRMKaRlnCAgi4xmdPAzmBqajMiRoXbadilMDpzmlei"></script>
-<script src="app.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AR02EFdH1jPdaVL34tntP0ggHiTDRB_Qvr1-sskRMKaRlnCAgi4xmdPAzmBqajMiRoXbadilMDpzmlei" data-sdk-integration-source="button-factory"></script>
+
+<script src="paypal.js"></script>
