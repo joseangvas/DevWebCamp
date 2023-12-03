@@ -32,7 +32,7 @@
 
   <div class="speakers__grid">
     <?php foreach($ponentes as $ponente) { ?>
-      <div <?php aos_animacion(); ?> class="speaker">
+      <div class="speaker">
         <picture>
           <source srcset="img/speakers/<?php echo $ponente->imagen; ?>.webp" type="image/webp">
           <source srcset="img/speakers/<?php echo $ponente->imagen; ?>.png" type="image/png">

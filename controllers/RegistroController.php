@@ -95,6 +95,7 @@ class RegistroController {
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
       if(!is_auth()) {
         header('Location: /login');
+        return;
       }
 
       // Validar que post no venga vacío
@@ -161,7 +162,6 @@ class RegistroController {
     $router->render('registro/conferencias', [
       'titulo' => 'Elige Workshops y Conferencias',
       'eventos_formateados' => $eventos_formateados
-
     ]);
   }
 }

@@ -3,7 +3,7 @@
 
 <div class="eventos-registro">
   <main class="eventos-registro__listado">
-    <?php debuguear($eventos); ?>
+
   </main>
 
   <aside>
