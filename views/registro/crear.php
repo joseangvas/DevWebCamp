@@ -37,6 +37,7 @@
           <div id="paypal-button-container"></div>
         </div>  
       </div>
+      
     </div>
 
     <div class="paquete">

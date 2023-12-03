@@ -15,6 +15,7 @@ class RegistroController {
   public static function crear(Router $router) {
     if(!is_auth()) {
       header('Location: /');
+      return;
     }
 
     // Verificar si el Usuario ya está Registrado
@@ -22,6 +23,7 @@ class RegistroController {
 
     if(isset($registro) && $registro->paquete_id ==="3") {
       header('Location: /boleto=id=' . urlencode($registro->token));
+      return;
     }
 
     $router->render('registro/crear', [
@@ -35,6 +37,7 @@ class RegistroController {
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
       if(!is_auth()) {
         header('Location: /login');
+        return;
       }
 
           // Verificar si el Usuario ya está Registrado
@@ -42,6 +45,7 @@ class RegistroController {
 
       if(isset($registro) && $registro->paquete_id ==="3") {
         header('Location: /boleto=id=' . urlencode($registro->token));
+        return;
       }
       
       $token = substr(md5(uniqid(rand(), true)), 0, 8);
@@ -70,6 +74,7 @@ class RegistroController {
 
     if(!$id || !strlen($id) === 8) {
       header('Location: /');
+      return;
     }
 
     // Buscarlo en la Base de Datos
@@ -125,6 +130,7 @@ class RegistroController {
   public static function conferencias(Router $router) {
     if(!is_auth()) {
       header('Location: /login');
+      return;
     }
 
     // Validar que el Usuario tenga el plan presencial

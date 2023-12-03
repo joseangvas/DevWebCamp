@@ -26,12 +26,6 @@
       </ul>
 
       <p class="paquete__precio">$199</p>
-
-      <div id="smart-button-container">
-        <div style="text-align: center;">
-          <div id="paypal-button-container"></div>
-        </div>  
-      </div>
     </div>
 
     <div class="paquete">
@@ -49,7 +43,3 @@
     </div>
   </div>
 </main>
-
-<script src="https://www.paypal.com/sdk/js?client-id=AR02EFdH1jPdaVL34tntP0ggHiTDRB_Qvr1-sskRMKaRlnCAgi4xmdPAzmBqajMiRoXbadilMDpzmlei" data-sdk-integration-source="button-factory"></script>
-
-<script src="paypal.js"></script>
