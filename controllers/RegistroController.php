@@ -169,9 +169,11 @@ class RegistroController {
       }
     }
 
+    $eventos = $eventos_formateados;
+
     $router->render('registro/conferencias', [
       'titulo' => 'Elige Workshops y Conferencias',
-      'eventos_formateados' => $eventos_formateados
+      'eventos' => $eventos
     ]);
   }
 }

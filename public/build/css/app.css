@@ -1562,4 +1562,22 @@ h3 {
   background-color: #007df4;
   color: #FFFFFF;
 }
+
+.eventos-registro {
+  width: min(95%, 140rem);
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .eventos-registro__listado {
+    flex: 0 0 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .registro {
+    flex: 0 0 40%;
+  }
+}
 /*# sourceMappingURL=app.css.map */
