@@ -106,7 +106,7 @@
   <h2 class="boletos__heading">Boletos & Precios</h2>
   <p class="boletos__descripcion">Precios para DevWebCamp</p>
 
-  <div <?php aos_animacion(); ?> class="boletos__grid">
+  <div class="boletos__grid">
     <div class="boleto boleto--presencial">
       <h4 class="boleto__logo">&#60;DevWebCamp /></h4>
       <p class="boleto__plan">Presencial</p>
