@@ -4,6 +4,7 @@ namespace Controllers;
 
 use Model\Categoria;
 use Model\Dia;
+use Model\Evento;
 use Model\Hora;
 use Model\Paquete;
 use Model\Ponente;
@@ -139,9 +140,12 @@ class RegistroController {
 
     if($registro->paquete_id !== "1") {
       header('Location: /');
+      return;
     }
 
+    $eventos = Evento::ordenar('hora_id', 'ASC');
     $eventos_formateados = [];
+
     foreach($eventos as $evento) {
       $evento->categoria = Categoria::find($evento->categoria_id);
       $evento->dia = Dia::find($evento->dia_id);

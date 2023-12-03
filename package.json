@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Proyecto Final Desarrollo Web Completo con @codigoconjuan",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "gulp dev"
   },

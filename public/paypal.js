@@ -1,4 +1,3 @@
-<script>
 function initPayPalButton() {
   paypal.Buttons({
     style: {
@@ -100,4 +99,3 @@ function initPayPalButton() {
 
 }
 initPayPalButton();
-</script>
