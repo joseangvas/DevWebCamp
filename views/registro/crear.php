@@ -54,8 +54,8 @@
 
       <div id="smart-button-container">
         <div style="text-align: center;">
-          <div id="paypal-button-container"></div>
-        </div>  
+          <div id="paypal-button-container-virtual"></div>
+        </div>
       </div>
       
     </div>

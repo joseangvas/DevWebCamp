@@ -134,14 +134,25 @@ class RegistroController {
       return;
     }
 
-    // Validar que el Usuario tenga el plan presencial
+    // Validar que el usuario tenga el plan presencial
     $usuario_id = $_SESSION['id'];
     $registro = Registro::where('usuario_id', $usuario_id);
 
-    if($registro->paquete_id !== "1") {
-      header('Location: /');
-      return;
+    if(isset($registro) && $registro->paquete_id === "2") {
+        header('Location: /boleto?id=' . urlencode($registro->token));
+        return;
     }
+    
+    if($registro->paquete_id !== "1") {
+        header('Location: /');
+        return;
+    }
+
+    // Redireccionar a boleto virtual en caso de haber finalizado su registro
+    // if(isset($registro->regalo_id) && $registro->paquete_id === "1") {
+    //     header('Location: /boleto?id=' . urlencode($registro->token));
+    //     return;
+    // }
 
     $eventos = Evento::ordenar('hora_id', 'ASC');
     $eventos_formateados = [];
