@@ -16,7 +16,7 @@ use Controllers\RegistroController;
 
 $router = new Router();
 
-// Login
+// Login de Usuario
 $router->get('/login', [AuthController::class, 'login']);
 $router->post('/login', [AuthController::class, 'login']);
 $router->post('/logout', [AuthController::class, 'logout']);
