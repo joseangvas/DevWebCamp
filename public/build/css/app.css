@@ -1016,7 +1016,7 @@ h3 {
   background-color: #0063c1;
   cursor: pointer;
 }
-.formulario__submit--registrar {
+.formulario__submit--registrar, .formulario__submit--full {
   width: 100%;
 }
 

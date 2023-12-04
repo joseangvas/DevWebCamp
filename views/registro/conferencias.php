@@ -60,5 +60,3 @@
         </form>
     </aside>
 </div>
-  
-<!-- <script src="../../src/js/registro.js"></script> -->
