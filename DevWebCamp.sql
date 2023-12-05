@@ -58,13 +58,13 @@ CREATE TABLE IF NOT EXISTS `eventos` (
   KEY `fk_eventos_dias1_idx` (`dia_id`),
   KEY `fk_eventos_horas1_idx` (`hora_id`),
   KEY `fk_eventos_ponentes1_idx` (`ponente_id`),
-  CONSTRAINT `fk_eventos_categorias` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`),
-  CONSTRAINT `fk_eventos_dias1` FOREIGN KEY (`dia_id`) REFERENCES `dias` (`id`),
-  CONSTRAINT `fk_eventos_horas1` FOREIGN KEY (`hora_id`) REFERENCES `horas` (`id`),
-  CONSTRAINT `fk_eventos_ponentes1` FOREIGN KEY (`ponente_id`) REFERENCES `ponentes` (`id`)
+  CONSTRAINT `categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`),
+  CONSTRAINT `dia_id` FOREIGN KEY (`dia_id`) REFERENCES `dias` (`id`),
+  CONSTRAINT `hora_id` FOREIGN KEY (`hora_id`) REFERENCES `horas` (`id`),
+  CONSTRAINT `ponente_id` FOREIGN KEY (`ponente_id`) REFERENCES `ponentes` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla devwebcamp.eventos: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla devwebcamp.eventos: ~32 rows (aproximadamente)
 INSERT INTO `eventos` (`id`, `nombre`, `descripcion`, `disponibles`, `categoria_id`, `dia_id`, `hora_id`, `ponente_id`) VALUES
 	(1, 'Next.js - Aplicaciones con gran performance', 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sodales condimentum magna fringilla egestas. In non pellentesque magna, at mollis velit. Morbi nec dapibus diam. Phasellus ante neque, blandit eget tortor a, cursus molestie turpis. Aenean placerat aliquet nibh, et interdum ipsum finibus at. Nulla sit amet faucibus leo, vel blandit urna. Curabitur dictum euismod sem, eget euismod magna pulvinar et. Nam semper aliquet nunc eu ornare. ', 50, 2, 2, 1, 1),
 	(2, 'MongoDB - Base de Datos a gran escala', 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sodales condimentum magna fringilla egestas. In non pellentesque magna, at mollis velit. Morbi nec dapibus diam. Phasellus ante neque, blandit eget tortor a, cursus molestie turpis. Aenean placerat aliquet nibh, et interdum ipsum finibus at. Nulla sit amet faucibus leo, vel blandit urna. Curabitur dictum euismod sem, eget euismod magna pulvinar et. Nam semper aliquet nunc eu ornare. ', 50, 2, 2, 2, 2),
@@ -74,7 +74,7 @@ INSERT INTO `eventos` (`id`, `nombre`, `descripcion`, `disponibles`, `categoria_
 	(6, 'DevOps - Primeros Pasos', 'Nunc laoreet sit amet turpis eu vulputate. Etiam quis dignissim elit, ac commodo ligula. Donec eu mollis odio, vitae sodales est. Fusce ut turpis eros. Vestibulum mauris ligula, suscipit eget lacus non, vulputate laoreet enim. Etiam ac elementum lacus, eu dapibus dolor. Proin ac justo in erat elementum venenatis sit amet et arcu. Cras eu ultrices lorem, et mollis libero. Nam ex velit, sollicitudin ac lectus ut, lobortis blandit nibh. Donec vulputate eros quis arcu varius bibendum. Vestibulum mattis consectetur orci eget feugiat. Donec massa ligula, pulvinar vitae sem nec, suscipit tempus tortor. Nulla congue venenatis metus. Ut quis diam est. Sed non sagittis justo, ut rhoncus neque. Quisque ut mi et nunc sollicitudin luctus quis a ante. ', 30, 1, 1, 1, 5),
 	(7, 'WordPress y React - Gran Performance a costo 0', 'Nunc laoreet sit amet turpis eu vulputate. Etiam quis dignissim elit, ac commodo ligula. Donec eu mollis odio, vitae sodales est. Fusce ut turpis eros. Vestibulum mauris ligula, suscipit eget lacus non, vulputate laoreet enim. Etiam ac elementum lacus, eu dapibus dolor. Proin ac justo in erat elementum venenatis sit amet et arcu. Cras eu ultrices lorem, et mollis libero. Nam ex velit, sollicitudin ac lectus ut, lobortis blandit nibh. Donec vulputate eros quis arcu varius bibendum. Vestibulum mattis consectetur orci eget feugiat. Donec massa ligula, pulvinar vitae sem nec, suscipit tempus tortor. Nulla congue venenatis metus. Ut quis diam est. Sed non sagittis justo, ut rhoncus neque. Quisque ut mi et nunc sollicitudin luctus quis a ante. ', 40, 2, 1, 2, 6),
 	(8, 'React, Angular y Svelte - Creando un Proyecto', 'Nunc laoreet sit amet turpis eu vulputate. Etiam quis dignissim elit, ac commodo ligula. Donec eu mollis odio, vitae sodales est. Fusce ut turpis eros. Vestibulum mauris ligula, suscipit eget lacus non, vulputate laoreet enim. Etiam ac elementum lacus, eu dapibus dolor. Proin ac justo in erat elementum venenatis sit amet et arcu. Cras eu ultrices lorem, et mollis libero. Nam ex velit, sollicitudin ac lectus ut, lobortis blandit nibh. Donec vulputate eros quis arcu varius bibendum. Vestibulum mattis consectetur orci eget feugiat. Donec massa ligula, pulvinar vitae sem nec, suscipit tempus tortor. Nulla congue venenatis metus. Ut quis diam est. Sed non sagittis justo, ut rhoncus neque. Quisque ut mi et nunc sollicitudin luctus quis a ante. ', 30, 1, 1, 3, 7),
-	(9, 'Laravel y Next.js - Aplicaciones Full Stack en Tiempo Record', 'Nunc laoreet sit amet turpis eu vulputate. Etiam quis dignissim elit, ac commodo ligula. Donec eu mollis odio, vitae sodales est. Fusce ut turpis eros. Vestibulum mauris ligula, suscipit eget lacus non, vulputate laoreet enim. Etiam ac elementum lacus, eu dapibus dolor. Proin ac justo in erat elementum venenatis sit amet et arcu. Cras eu ultrices lorem, et mollis libero. Nam ex velit, sollicitudin ac lectus ut, lobortis blandit nibh. Donec vulputate eros quis arcu varius bibendum. Vestibulum mattis consectetur orci eget feugiat. Donec massa ligula, pulvinar vitae sem nec, suscipit tempus tortor. Nulla congue venenatis metus. Ut quis diam est. Sed non sagittis justo, ut rhoncus neque. Quisque ut mi et nunc sollicitudin luctus quis a ante. ', 40, 1, 2, 1, 8),
+	(9, 'Laravel y Next.js - Aplicaciones Full Stack en Tiempo Record', 'Nunc laoreet sit amet turpis eu vulputate. Etiam quis dignissim elit, ac commodo ligula. Donec eu mollis odio, vitae sodales est. Fusce ut turpis eros. Vestibulum mauris ligula, suscipit eget lacus non, vulputate laoreet enim. Etiam ac elementum lacus, eu dapibus dolor. Proin ac justo in erat elementum venenatis sit amet et arcu. Cras eu ultrices lorem, et mollis libero. Nam ex velit, sollicitudin ac lectus ut, lobortis blandit nibh. Donec vulputate eros quis arcu varius bibendum. Vestibulum mattis consectetur orci eget feugiat. Donec massa ligula, pulvinar vitae sem nec, suscipit tempus tortor. Nulla congue venenatis metus. Ut quis diam est. Sed non sagittis justo, ut rhoncus neque. Quisque ut mi et nunc sollicitudin luctus quis a ante. ', 0, 1, 2, 1, 8),
 	(10, 'Remix - El Nuevo Framework de React', 'Nunc laoreet sit amet turpis eu vulputate. Etiam quis dignissim elit, ac commodo ligula. Donec eu mollis odio, vitae sodales est. Fusce ut turpis eros. Vestibulum mauris ligula, suscipit eget lacus non, vulputate laoreet enim. Etiam ac elementum lacus, eu dapibus dolor. Proin ac justo in erat elementum venenatis sit amet et arcu. Cras eu ultrices lorem, et mollis libero. Nam ex velit, sollicitudin ac lectus ut, lobortis blandit nibh. Donec vulputate eros quis arcu varius bibendum. Vestibulum mattis consectetur orci eget feugiat. Donec massa ligula, pulvinar vitae sem nec, suscipit tempus tortor. Nulla congue venenatis metus. Ut quis diam est. Sed non sagittis justo, ut rhoncus neque. Quisque ut mi et nunc sollicitudin luctus quis a ante. ', 30, 2, 1, 3, 9),
 	(11, 'TailwindCSS - Crear Sitios Accesibles', 'Nunc laoreet sit amet turpis eu vulputate. Etiam quis dignissim elit, ac commodo ligula. Donec eu mollis odio, vitae sodales est. Fusce ut turpis eros. Vestibulum mauris ligula, suscipit eget lacus non, vulputate laoreet enim. Etiam ac elementum lacus, eu dapibus dolor. Proin ac justo in erat elementum venenatis sit amet et arcu. Cras eu ultrices lorem, et mollis libero. Nam ex velit, sollicitudin ac lectus ut, lobortis blandit nibh. Donec vulputate eros quis arcu varius bibendum. Vestibulum mattis consectetur orci eget feugiat. Donec massa ligula, pulvinar vitae sem nec, suscipit tempus tortor. Nulla congue venenatis metus. Ut quis diam est. Sed non sagittis justo, ut rhoncus neque. Quisque ut mi et nunc sollicitudin luctus quis a ante. ', 30, 1, 1, 4, 10),
 	(12, 'TypeScript en React', 'Nunc laoreet sit amet turpis eu vulputate. Etiam quis dignissim elit, ac commodo ligula. Donec eu mollis odio, vitae sodales est. Fusce ut turpis eros. Vestibulum mauris ligula, suscipit eget lacus non, vulputate laoreet enim. Etiam ac elementum lacus, eu dapibus dolor. Proin ac justo in erat elementum venenatis sit amet et arcu. Cras eu ultrices lorem, et mollis libero. Nam ex velit, sollicitudin ac lectus ut, lobortis blandit nibh. Donec vulputate eros quis arcu varius bibendum. Vestibulum mattis consectetur orci eget feugiat. Donec massa ligula, pulvinar vitae sem nec, suscipit tempus tortor. Nulla congue venenatis metus. Ut quis diam est. Sed non sagittis justo, ut rhoncus neque. Quisque ut mi et nunc sollicitudin luctus quis a ante. ', 30, 2, 2, 3, 11),
@@ -99,6 +99,20 @@ INSERT INTO `eventos` (`id`, `nombre`, `descripcion`, `disponibles`, `categoria_
 	(31, 'GraphQL - Introducción Práctica', 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sodales condimentum magna fringilla egestas. In non pellentesque magna, at mollis velit. Morbi nec dapibus diam. Phasellus ante neque, blandit eget tortor a, cursus molestie turpis. Aenean placerat aliquet nibh, et interdum ipsum finibus at. Nulla sit amet faucibus leo, vel blandit urna. Curabitur dictum euismod sem, eget euismod magna pulvinar et. Nam semper aliquet nunc eu ornare. ', 30, 1, 2, 8, 15),
 	(32, 'React y TailwindCSS - Frontend Moderno', 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sodales condimentum magna fringilla egestas. In non pellentesque magna, at mollis velit. Morbi nec dapibus diam. Phasellus ante neque, blandit eget tortor a, cursus molestie turpis. Aenean placerat aliquet nibh, et interdum ipsum finibus at. Nulla sit amet faucibus leo, vel blandit urna. Curabitur dictum euismod sem, eget euismod magna pulvinar et. Nam semper aliquet nunc eu ornare. ', 30, 1, 2, 6, 17);
 
+-- Volcando estructura para tabla devwebcamp.eventos_registros
+CREATE TABLE IF NOT EXISTS `eventos_registros` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `evento_id` int DEFAULT NULL,
+  `registro_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `evento_id` (`evento_id`),
+  KEY `registro_id` (`registro_id`),
+  CONSTRAINT `evento_id` FOREIGN KEY (`evento_id`) REFERENCES `eventos` (`id`),
+  CONSTRAINT `registro_id` FOREIGN KEY (`registro_id`) REFERENCES `registros` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Volcando datos para la tabla devwebcamp.eventos_registros: ~0 rows (aproximadamente)
+
 -- Volcando estructura para tabla devwebcamp.horas
 CREATE TABLE IF NOT EXISTS `horas` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -116,6 +130,19 @@ INSERT INTO `horas` (`id`, `hora`) VALUES
 	(6, '17:00 - 17:55'),
 	(7, '18:00 - 18:55'),
 	(8, '19:00 - 19:55');
+
+-- Volcando estructura para tabla devwebcamp.paquetes
+CREATE TABLE IF NOT EXISTS `paquetes` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Volcando datos para la tabla devwebcamp.paquetes: ~3 rows (aproximadamente)
+INSERT INTO `paquetes` (`id`, `nombre`) VALUES
+	(1, 'Presencial'),
+	(2, 'Virtual'),
+	(3, 'Gratis');
 
 -- Volcando estructura para tabla devwebcamp.ponentes
 CREATE TABLE IF NOT EXISTS `ponentes` (
@@ -151,6 +178,46 @@ INSERT INTO `ponentes` (`id`, `nombre`, `apellido`, `ciudad`, `pais`, `imagen`, 
 	(17, ' Vicente ', 'Figueroa', 'CDMX', 'México', '2a41a781d8ae8f0f7a1969c766276b08', 'React,Tailwind,JavaScript,TypeScript,Node', '{"facebook":"https://facebook.com/C%C3%B3digo-Con-Juan-103341632130628","twitter":"https://twitter.com/codigoconjuan","youtube":"https://youtube.com/codigoconjuan","instagram":"","tiktok":"","github":""}'),
 	(18, ' Nico', 'Fraga', 'Buenos Aires', 'Argentina', '024384db8eb6a0b4a1569dc90526d27f', 'PHP,Laravel,Flutter', '{"facebook":"https://facebook.com/C%C3%B3digo-Con-Juan-103341632130628","twitter":"https://twitter.com/codigoconjuan","youtube":"https://youtube.com/codigoconjuan","instagram":"https://www.instagram.com/joseangvas/?hl=es","tiktok":"","github":""}'),
 	(19, ' José Angel', 'Vásquez Paz', 'Maracay', 'Venezuela', 'c440eed888244a776a4fda1f75f099e7', 'React,Angular,Node.js,MongoDB,PHP', '{"facebook":"https://www.facebook.com/joseangvas","twitter":"https://twitter.com/joseangvas_dev","youtube":"https://www.youtube.com/@codejavtech","instagram":"https://www.instagram.com/joseangvas/?hl=es","tiktok":"https://www.tiktok.com/@joseangvas","github":"https://github.com/joseangvas"}');
+
+-- Volcando estructura para tabla devwebcamp.regalos
+CREATE TABLE IF NOT EXISTS `regalos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Volcando datos para la tabla devwebcamp.regalos: ~9 rows (aproximadamente)
+INSERT INTO `regalos` (`id`, `nombre`) VALUES
+	(1, 'Paquete Stickers'),
+	(2, 'Camisa Mujer - Chica'),
+	(3, 'Camisa Mujer - Mediana'),
+	(4, 'Camisa Mujer - Grande'),
+	(5, 'Camisa Mujer - XL'),
+	(6, 'Camisa Hombre - Chica'),
+	(7, 'Camisa Hombre - Mediana'),
+	(8, 'Camisa Hombre - Grande'),
+	(9, 'Camisa Hombre - XL');
+
+-- Volcando estructura para tabla devwebcamp.registros
+CREATE TABLE IF NOT EXISTS `registros` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `paquete_id` int DEFAULT NULL,
+  `pago_id` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `token` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `usuario_id` int DEFAULT NULL,
+  `regalo_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `usuarioId` (`usuario_id`),
+  KEY `paquete_id` (`paquete_id`),
+  KEY `regalo_id` (`regalo_id`),
+  CONSTRAINT `paquete_id` FOREIGN KEY (`paquete_id`) REFERENCES `paquetes` (`id`),
+  CONSTRAINT `regalo_id` FOREIGN KEY (`regalo_id`) REFERENCES `regalos` (`id`),
+  CONSTRAINT `usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Volcando datos para la tabla devwebcamp.registros: ~0 rows (aproximadamente)
+INSERT INTO `registros` (`id`, `paquete_id`, `pago_id`, `token`, `usuario_id`, `regalo_id`) VALUES
+	(1, 1, '26G87235R30262832', '45fbace7', 13, NULL);
 
 -- Volcando estructura para tabla devwebcamp.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
