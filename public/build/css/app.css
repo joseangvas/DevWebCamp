@@ -1626,13 +1626,19 @@ h3 {
 .bloque:nth-child(2) {
   background-image: linear-gradient(to left top, #A855F7, #cd9efa);
 }
+.bloque:nth-child(3) {
+  background-image: linear-gradient(to left top, #65A30D, #91ea13);
+}
+.bloque:nth-child(4) {
+  background-image: linear-gradient(to left top, #0f3ccf, #3a65f1);
+}
 .bloque__heading {
   margin: 0.5rem 0 2rem 0;
   font-size: 3.6rem;
 }
 .bloque__texto {
   margin: 1rem 0;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 .bloque__texto--cantidad {
   margin-top: 5rem;
