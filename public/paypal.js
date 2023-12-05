@@ -98,4 +98,5 @@ function initPayPalButton() {
   }).render('#paypal-button-container-virtual');
 
 }
+
 initPayPalButton();

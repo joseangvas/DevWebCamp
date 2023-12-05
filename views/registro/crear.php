@@ -3,6 +3,7 @@
   <p class="registro__descripcion">Elige tu Plan</p>
 
   <div <?php aos_animacion(); ?> class="paquetes__grid">
+    <!-- PASE GRATIS -->
     <div class="paquete">
       <h3 class="paquete__nombre">Pase Gratis</h3>
 
@@ -18,6 +19,7 @@
       </form>
     </div>
 
+    <!-- PASE PRESENCIAL -->
     <div class="paquete">
       <h3 class="paquete__nombre">Pase Presencial</h3>
 
@@ -40,6 +42,7 @@
       
     </div>
 
+    <!-- PASE VIRTUAL -->
     <div class="paquete">
       <h3 class="paquete__nombre">Pase Virtual</h3>
 
@@ -62,6 +65,7 @@
   </div>
 </main>
 
+<!-- INSTANCIAR PAGO ELECTRONICO (Paypal o Tarjetas) -->
 <script src="https://www.paypal.com/sdk/js?client-id=AR02EFdH1jPdaVL34tntP0ggHiTDRB_Qvr1-sskRMKaRlnCAgi4xmdPAzmBqajMiRoXbadilMDpzmlei" data-sdk-integration-source="button-factory"></script>
 
 <script src="paypal.js"></script>
